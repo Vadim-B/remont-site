@@ -1,0 +1,83 @@
+/*     Typography     */
+
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900|Roboto:400,500,700,900&display=swap');
+
+body {
+	color: var(--white);
+	font-family: 'Avenir Next Cyr', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+h1 {
+	letter-spacing: .1em;
+	font-size: 1.875rem;
+	line-height: 2.375rem;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	@media (min-width: 768px) {
+		font-size: 2.5rem;
+		line-height: 3.5rem;
+	}
+
+	@media (min-width: 992px) {
+		font-size: 2.688rem;
+		line-height: 3.5625rem;
+	}
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 1.875rem;
+	line-height: 2.375rem;
+
+	@media (min-width: 768px) {
+		font-size: 2.5rem;
+		line-height: 3.5rem;
+	}
+
+	@media (min-width: 992px) {
+		font-size: 2.688rem;
+		line-height: 3.75rem;
+	}
+}
+
+h4,
+.h4 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	font-weight: 600;
+
+	@media (min-width: 768px) {
+		font-size: 1rem;
+		line-height: 1.125rem;
+	}
+
+	@media (min-width: 992px) {
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+	}
+}
+
+a {
+	color: var(--white);
+	&:hover {
+		color: var(--white);
+	}
+}
+
+.small {
+	font-size: .9em;
+	font-weight: 400;
+}
+
+.btn {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+sup {
+	font-size: .8em;
+	vertical-align: super;
+}

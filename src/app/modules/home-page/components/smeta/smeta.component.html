@@ -1,0 +1,83 @@
+<section class="smeta">
+  <div class="light__mask color-black">
+    <div class="container pt-3 pt-md-5">
+
+<!--          Headline          -->
+
+      <div class="smeta__headline headline">
+        <h2 class="center mb-3 mb-md-4"><span></span>Бесплатно сделаем замер и рассчитаем смету в день Вашего обращения</h2>
+      </div>
+
+<!--          /Headline          -->
+
+      <div class="row">
+
+<!--          Заявка на просчет          -->
+
+        <div class="smeta__order col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center pb-3 pb-md-5">
+          <h4 class="mb-3">После заявки с Вами свяжется:</h4>
+          <div class="d-flex align-items-center mb-3">
+            <div class="builder-icon mr-2">
+              <img src="../../../../../assets/img/builder-icon.png" alt="">
+            </div>
+            <div>
+              <div class="builder-position mb-1">Старший прораб</div>
+              <div class="builder-name">Петров Иван</div>
+            </div>
+          </div>
+          <span class="mb-3">и согласует время для приезда мастера</span>
+          <form class="d-flex flex-column align-items-center mb-5" name="smeta__callback-form" (ngSubmit)="submitCallbackForm(userContactForm)" #userContactForm="ngForm">
+            <div class="form-group col-12">
+              <input type="text" class="form-control" id="name-input" name="name-input" placeholder="Введите Ваше имя" [(ngModel)]="callMeBack.name">
+            </div>
+            <div class="form-group col-12">
+              <input type="tel" class="form-control" id="tel-input" name="tel-input" pattern="^[ 0-9]+$" placeholder="Введите Ваш телефон" mask='(000) 000-00-00' [(ngModel)]="callMeBack.tel">
+            </div>
+            <button type="submit" class="btn btn-transparent mt-3">
+              <span>Заказать замер и смету</span>
+            </button>
+          </form>
+          <p class="form-message" [class.success]="classMessage == 'success'" [class.danger]="classMessage == 'danger'">{{ formMessage }}</p>
+        </div>
+
+<!--          /Заявка на просчет          -->
+<!--          Пример сметы          -->
+
+        <div class="col-12 col-md-6 col-lg-4 pb-3 pb-md-5">
+          <div class="smeta__example d-flex flex-column justify-content-around align-items-center">
+            <h4 class="color-primary center mt-3 mb-3">После замера Вы получаете:</h4>
+            <div class="smeta__example-icon mb-3">
+              <img src="../../../../../assets/img/smeta_icon.png" alt="">
+            </div>
+            <h4 class="center mb-3">Точный расчет стоимости и сроков ремонта + смету на след. день</h4>
+            <p class="center mb-3">Стоимость, зафиксированная в смете, закрепляется и не меняется до окончания ремонтных работ.</p>
+          </div>
+        </div>
+
+<!--          /Пример сметы          -->
+<!--          Начальник          -->
+
+        <div class="smeta__president col-md-4">
+          <div class="quote d-flex">
+            <i class="fa fa-quote-right color-primary" aria-hidden="true"></i>
+            <blockquote class="col-8">В 99% расчёт стоимости по смете соответствует реальной стоимости работ</blockquote>
+          </div>
+          <div class="smeta__president-name mt-5 mb-4">
+            <div class="name color-primary">Михаил Минчев</div>
+            <div class="name-description ml-2 mb-4 mb-md-5">Руководитель строительной компании ЭлитСтрой.
+              <br>Опыт работы - 12лет
+            </div>
+          </div>
+
+          <div class="president-photo">
+            <img src="../../../../..//assets/img/president.png" alt="">
+          </div>
+
+        </div>
+
+        <!--          /Начальник          -->
+
+      </div>
+    </div>
+  </div>
+</section>

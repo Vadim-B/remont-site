@@ -1,0 +1,136 @@
+.smeta {
+	background: url(../../../../../assets/img/jumbotron-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+
+/*     Заявка на просчет     */
+
+	&__order {
+		position: relative;
+	}
+
+	.builder-icon {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.builder-position {
+		font-size: .9em;
+		color: var(--grey);
+	}
+
+	.builder-name {
+		font-weight: 600;
+	}
+
+	form {
+		width: 90%;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	.form-message {
+		position: absolute;
+		bottom: 25px;
+		transition: .1s;
+		display: none;
+
+		@media (min-width: 768px) {
+			bottom: 75px;
+		}
+	}
+
+	.danger {
+		display: block;
+		color: var(--danger);
+	}
+
+	.success {
+		display: block;
+		color: var(--success);
+	}
+
+/*     /Заявка на просчет     */
+/*     Пример сметы     */
+
+	&__example {
+		width: 90%;
+		margin: 0 auto;
+		height: 95%;
+		border-radius: 5px;
+		background: var(--white);
+		box-shadow: -4px 4px 3px 0px var(--primary);
+
+		padding: 15px;
+
+		p {
+			font-size: .9em;
+			color: var(--grey);
+		}
+	}
+
+/*     /Пример сметы     */
+/*     Начальник     */
+
+	&__president {
+		display: none;
+
+		@media (min-width: 992px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			blockquote {
+				font-weight: 600;
+				font-style: italic;
+				z-index: 2;
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 3px;
+				display: inline-block;
+				padding: 5px 10px;
+			}
+
+			&-name {
+				z-index: 2;
+			}
+
+			.name {
+				font-size: 1.4em;
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 3px;
+				display: inline-block;
+				padding: 5px 10px;
+			}
+
+			.name-description {
+				font-size: 0.9em;
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 3px;
+				display: inline-block;
+				padding: 5px 10px;
+			}
+
+			.president-photo {
+				position: absolute;
+				height: 105%;
+				bottom: 0;
+				right: 0;
+
+				img {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+/*     /Начальник     */
+
+}

@@ -1,0 +1,80 @@
+<section class="calc color-black">
+  <div class="light__mask pt-3 pt-md-5 pb-3 pb-md-5">
+    <div class="container">
+
+  <!--          Headline          -->
+
+      <div class="calc__headline headline mb-3 mb-md-5">
+        <h2 class="color-black center mb-3"><span></span>Рассчитайте предварительную стоимость и сроки ремонта Вашего помещения</h2>
+        <p class="color-primary center">Ответьте на 6 вопросов и получите гарантированный подарок!</p>
+      </div>
+
+  <!--          /Headline          -->
+  <!--          Progress bar          -->
+
+      <ul class="calc__progressbar d-flex justify-content-between mb-4">
+        <li class="complete"><span></span><span></span></li>
+        <li class="calc__progressbar-step step1 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 0"><span></span><span></span></li>
+        <li class="calc__progressbar-step step2 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 1"><span></span><span></span></li>
+        <li class="calc__progressbar-step step3 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 2"><span></span><span></span></li>
+        <li class="calc__progressbar-step step4 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 3"><span></span><span></span></li>
+        <li class="calc__progressbar-step step5 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 4"><span></span><span></span></li>
+        <li class="calc__progressbar-step step6 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 5"><span></span><span></span></li>
+        <li class="calc__progressbar-step step7 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 6"><span></span><span></span></li>
+      </ul>
+
+  <!--          /Progress bar          -->
+  <!--          Question          -->
+
+      <div class="d-flex justify-content-between">
+        <div class="flex-grow d-flex flex-column justify-content-between pr-2">
+          <div class="calc__question d-flex align-items-end mt-4">
+            <span class="calc__question-number">0{{ questionNumber + 1 }}</span>
+            <span class="calc__question-total center">/08</span>
+            <h4 class="ml-3">{{ question[questionNumber] }}</h4>
+          </div>
+
+  <!--          /Question          -->
+  <!--          Answers          -->
+
+          <form class="calc__answers d-flex flex-column flex-md-row justify-content-start align-items-center">
+            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="calc__answers-label col-md-3 d-flex mb-2" for="inlineRadio1">
+              <span class="mr-2"></span> <span class="flex-grow">Вторичка</span>
+            </label>
+
+            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+            <label class="calc__answers-label col-md-3 d-flex mb-2" for="inlineRadio2">
+              <span class="mr-2"></span> <span class="flex-grow">В новостройке</span>
+            </label>
+
+            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
+            <label class="calc__answers-label col-md-3 d-flex mb-2" for="inlineRadio3">
+              <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
+            </label>
+          </form>
+
+  <!--          /Answers          -->
+  <!--          Submit answers          -->
+
+          <div class="calc__submit d-flex justify-content-center mb-4 mb-md-5" [class.none]="questionNumber === 7">
+            <div class="calc__submit-btn previous color-primary color-hover-secondary mr-2"(click)="previousQuestion()">Назад</div>
+            <div class="calc__submit-btn next color-primary color-hover-secondary" (click)="nextQuestion()">Далее</div>
+          </div>
+        </div>
+
+  <!--          /Submit answers          -->
+  <!--          Gift          -->
+
+        <div class="calc__gift" [class.none]="questionNumber === 7">
+          <span class="small mb-2">До выбора подарка осталось:</span>
+          <span class="color-primary mb-4">{{ 6 - questionNumber }} вопросов</span>
+          <div class="calc__gift-img">
+            <img src="../../../../../assets/img/gift.png" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

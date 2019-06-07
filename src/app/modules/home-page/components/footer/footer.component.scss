@@ -1,0 +1,21 @@
+footer {
+	background: #000;
+
+	.tel {
+		i {
+			font-size: 1.3em;
+		}
+
+		a {
+			font-size: 1.2em;
+		}
+	}
+
+	.social {
+		font-size: 1.2em;
+
+		& i:hover {
+			transform: scale(1.5);
+		}
+	}
+}

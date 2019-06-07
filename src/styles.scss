@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import "scss_module/reset";
+@import "scss_module/variables";
+@import "scss_module/type";
+@import "scss_module/helpers";
+@import "scss_module/global";
+@import "assets/fonts/AvenirNextCyr/stylesheet.css";

@@ -1,0 +1,123 @@
+<section class="steps">
+  <div class="dark__mask">
+    <div class="container pt-3 pt-md-5 pb-3 pb-md-5">
+
+
+
+      <div class="steps__headline headline">
+        <h2 class="center mb-3 mb-md-4"><span></span>6 шагов как будет проходить работа над Вашим ремонтом</h2>
+      </div>
+
+
+
+      <div class="steps__grid-wrap color-blac" (mouseover)="targetStepToggleStopped = true" (mouseout)="targetStepToggleStopped = false">
+        <div class="steps-1" [class.target]="targetStep === 1" (mouseover)="targetStep = 1">
+          <div class="padding-line"></div>
+          <div class="step-wrap">
+            <div class="step-img">
+              <img src="../../../../../assets/img/steps/1.png" alt="" *ngIf="targetStep == 1">
+              <img src="../../../../../assets/img/steps/1-1.png" alt="" *ngIf="targetStep != 1">
+            </div>
+            <h4 class="mb-2">Оставляете заявку и получаете консультацию</h4>
+            <p>Мы Вас консультируем. Вместе выявляем какой ремонт Вам нужен, а также на что нужно обратить внимание в первую очередь.</p>
+            <a href="" class="mt-2" data-toggle="modal" data-target="#intro__modal-callback">Оставить заявку</a>
+          </div>
+          <div class="triangle-outside"></div>
+          <div class="padding-line"></div>
+        </div>
+
+        <div class="steps-2" [class.target]="targetStep === 2" (mouseover)="targetStep = 2">
+          <div class="padding-line">
+            <div class="line"></div>
+            <div class="triangle-inside"></div>
+            <div class="line"></div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-img">
+              <img src="../../../../../assets/img/steps/2.png" alt="" *ngIf="targetStep == 2">
+              <img src="../../../../../assets/img/steps/2-1.png" alt="" *ngIf="targetStep != 2">
+            </div>
+            <h4 class="mb-2">Выезжаем на объект и проводим замеры помещения</h4>
+            <p>Сделаем замеры, поможем выбрать материалы. Расскажем как не переплатить.</p>
+          </div>
+          <div class="triangle-outside"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="steps-3" [class.target]="targetStep === 3" (mouseover)="targetStep = 3">
+          <div class="padding-line">
+            <div class="line"></div>
+            <div class="triangle-inside"></div>
+            <div class="line"></div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-img">
+              <img src="../../../../../assets/img/steps/3.png" alt="" *ngIf="targetStep == 3">
+              <img src="../../../../../assets/img/steps/3-1.png" alt="" *ngIf="targetStep != 3">
+            </div>
+            <h4 class="mb-2">Заключаем договор и составляем график выполнения и оплаты работ</h4>
+            <p>Подписываем с Вами договор и согласовываем смету</p>
+          </div>
+          <div class="triangle-outside"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="steps-4" [class.target]="targetStep === 4" (mouseover)="targetStep = 4">
+          <div class="padding-line">
+            <div class="line"></div>
+            <div class="triangle-inside"></div>
+            <div class="line"></div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-img">
+              <img src="../../../../../assets/img/steps/4.png" alt="" *ngIf="targetStep == 4">
+              <img src="../../../../../assets/img/steps/4-1.png" alt="" *ngIf="targetStep != 4">
+            </div>
+            <h4 class="mb-2">Осуществляем ремонтые работы Вашего помещения</h4>
+            <p>Закупаем все материалы и доставляем на объект, после приступаем к ремонтным работам. В ходе работ постоянно присылаем Вам фотоотчеты.</p>
+            <p>После ремонта делаем уборку и вывозим мусор.</p>
+          </div>
+          <div class="triangle-outside"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="steps-5" [class.target]="targetStep === 5" (mouseover)="targetStep = 5">
+          <div class="padding-line">
+            <div class="line"></div>
+            <div class="triangle-inside"></div>
+            <div class="line"></div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-img">
+              <img src="../../../../../assets/img/steps/5.png" alt="" *ngIf="targetStep == 5">
+              <img src="../../../../../assets/img/steps/5-1.png" alt="" *ngIf="targetStep != 5">
+            </div>
+            <h4 class="mb-2">Проводим 3-х уровневую проверку качества произведенных работ</h4>
+            <p>Каждый наш объект проходит 3-х уровневую систему контроля качества: прораб - инженер по контролю качества - директор по строительству</p>
+          </div>
+          <div class="triangle-outside"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="steps-6" [class.target]="targetStep === 6" (mouseover)="targetStep = 6">
+          <div class="padding-line">
+            <div class="line"></div>
+            <div class="triangle-inside"></div>
+            <div class="line"></div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-img">
+              <img src="../../../../../assets/img/steps/6.png" alt="" *ngIf="targetStep == 6">
+              <img src="../../../../../assets/img/steps/6-1.png" alt="" *ngIf="targetStep != 6">
+            </div>
+            <h4 class="mb-2">Рассчитываемся по факту</h4>
+            <p>На все работы даем 5 лет грантии!</p>
+            <p>В случае дефектов бесплатно устраняем их.</p>
+          </div>
+          <div class="line"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

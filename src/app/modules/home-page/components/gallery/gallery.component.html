@@ -1,0 +1,107 @@
+<section class="gallery color-black">
+  <div class="light__mask">
+    <div class="container pt-3 pt-md-5 pb-3 pb-md-5">
+
+<!--          Headline          -->
+
+      <div class="gallery__headline headline">
+        <h2 class="center mb-3 mb-md-5"><span></span>С 2012 года мы сдали 50+ квартир с ремонтом различного типа и сложности</h2>
+      </div>
+
+<!--          /Headline          -->
+<!--          Photo          -->
+
+      <div class="row mb-3 mb-md-4">
+        <div class="col-12 col-md-6 mb-3" (mouseover)="targetPhotoToggleStopped = true" (mouseout)="targetPhotoToggleStopped = false">
+          <div class="big-photo mb-2">
+            <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-{{ targetPhoto }}.jpg" alt=""></div>
+          <div class="small-photo-grid">
+            <div class="small-photo" [class.target]="targetPhoto === 1" (mouseover)="targetPhoto = 1">
+              <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-1.jpg" alt="">
+            </div>
+            <div class="small-photo" [class.target]="targetPhoto === 2" (mouseover)="targetPhoto = 2">
+              <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-2.jpg" alt="">
+            </div>
+            <div class="small-photo" [class.target]="targetPhoto === 3" (mouseover)="targetPhoto = 3">
+              <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-3.jpg" alt="">
+            </div>
+            <div class="small-photo" [class.target]="targetPhoto === 4" (mouseover)="targetPhoto = 4">
+              <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-4.jpg" alt="">
+            </div>
+            <div class="small-photo" [class.target]="targetPhoto === 5" (mouseover)="targetPhoto = 5">
+              <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-5.jpg" alt="">
+            </div>
+            <div class="small-photo" [class.target]="targetPhoto === 6" (mouseover)="targetPhoto = 6">
+              <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-6.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+<!--          /Photo          -->
+<!--          Описание работ          -->
+
+        <div class="gallery__description col-12 col-md-6">
+          <h4 class="mb-4">Ремонтно-отделочные работы под ключ по Вильямса 57 Одесса</h4>
+          <div class="row mb-4">
+            <div class="col-4 text-uppercase">
+                <i class="fa fa-home mr-2" aria-hidden="true"></i>
+                <span>Тип жилья:</span>
+              </div>
+            <div class="col-8">{{ galleryDescription[galleryNumber].type }}</div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-4 text-uppercase">
+                <i class="fa fa-arrows mr-2" aria-hidden="true"></i>
+                <span>Площадь:</span>
+              </div>
+            <div class="col-8">{{ galleryDescription[galleryNumber].square }} м</div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-4 text-uppercase">
+              <i class="fa fa-clock-o mr-2" aria-hidden="true"></i>
+              <span>Срок выполнения:</span>
+            </div>
+            <div class="col-8">{{ galleryDescription[galleryNumber].perio }} рабочих дней</div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-4 text-uppercase">
+              <i class="fa fa-file-text-o mr-2" aria-hidden="true"></i>
+              <span>Задача:</span></div>
+            <div class="col-8">{{ galleryDescription[galleryNumber].problem }}</div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-4 text-uppercase">
+              <i class="fa fa-creative-commons mr-2" aria-hidden="true"></i>
+              <span>Особенность ремонта:</span>
+            </div>
+            <div class="col-8">{{ galleryDescription[galleryNumber].specificity }}</div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-4 text-uppercase">
+              <i class="fa fa-commenting-o mr-2" aria-hidden="true"></i>
+              <span>Отзыв клиента:</span>
+            </div>
+            <div class="col-8">{{ galleryDescription[galleryNumber].feedback }}</div>
+          </div>
+        </div>
+      </div>
+
+<!--          /Описание работ          -->
+<!--          Btn          -->
+
+      <div class="d-flex justify-content-center">
+        <span class="gallery__toggle mr-3" (click)="prevGalleryNumber()" [class.notActive]="galleryNumber === 0">
+          <i class="fa fa-chevron-left mr-2" aria-hidden="true"></i>
+        </span>
+        <span class="gallery__number">0{{ galleryNumber + 1 }}</span>
+        <span class="gallery__total center">/05</span>
+        <span class="gallery__toggle ml-3" (click)="nextGalleryNumber()" [class.notActive]="galleryNumber === 4">
+          <i class="fa fa-chevron-right ml-2" aria-hidden="true"></i>
+        </span>
+      </div>
+
+<!--          /Btn          -->
+
+    </div>
+  </div>
+</section>

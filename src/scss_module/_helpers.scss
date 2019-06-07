@@ -1,0 +1,24 @@
+/*     Helpers     */
+
+.center {
+	text-align: center;
+}
+
+.color-primary {
+	color: var(--primary);
+	transition: .1s;
+}
+
+.color-black {
+	color: var(--black);
+}
+
+.color-hover-secondary:hover {
+	color: var(--secondary);
+	transition: .1s;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+

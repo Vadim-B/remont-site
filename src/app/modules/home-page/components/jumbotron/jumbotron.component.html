@@ -1,0 +1,158 @@
+<section class="intro">
+  <div class="dark__mask">
+    <div class="container intro__inner d-flex flex-column justify-content-between">
+
+<!--          Header          -->
+
+      <div class="header d-flex flex-column flex-md-row justify-content-between align-items-center mt-3 mb-5">
+        <div class="header__logo col-9 col-md-4 col-lg-3 d-flex justify-content-between align-items-center mb-3">
+          <a href=""><img src="../../../../../assets/img/logo.png" alt=""></a>
+          <div class="header__experience">
+            <p class="small">Более 7 лет специализируемся на комплексном ремонте квартир в Одессе</p>
+          </div>
+        </div>
+        <div class="header__price mb-3">
+          <a class="color-primary color-hover-secondary" href="../../../../../assets/price.txt" download="">
+            Скачать прайс-лист
+          </a>
+        </div>
+        <div class="header__contact col-9 col-md-4 col-lg-3 mb-3">
+          <p class="center small mb-1">Задайте вопроc напрямую в:</p>
+          <div class="header__contact-inner d-flex justify-content-center">
+            <a href="" class="header__contact-viber center col-5 ml-2 mr-1">
+            <img src="../../../../../assets/img/viber.png" alt="">
+              Viber
+            </a>
+            <a href="" class="header__contact-telegram center col-5 ml-2">
+              <img src="../../../../../assets/img/telegram.png" alt="">
+              Telegram
+            </a>
+          </div>
+        </div>
+        <div class="header__tel col-9 col-md-4 col-lg-3 ">
+          <p class="center small mb-1">Работаем без выходных по Одессе и обл.</p>
+          <div class="header__tel-border mt-3">
+            <div class="header__tel-inner mb-2 translate-to-top d-flex justify-content-between align-items-center">
+              <span class="header__tel-line"></span>
+              <a class="header__tel-number" href="tel:097 743 91 34">
+                <i class="fa fa-phone-square color-primary" aria-hidden="true"></i> 
+                (097) 743 91 34
+              </a>
+              <span class="header__tel-line"></span>
+            </div>
+            <div class="header__call-me translate-to-top center color-primary color-hover-secondary"
+            data-toggle="modal" data-target="#intro__modal-callback">Перезвоните мне</div>
+          </div>
+        </div>
+      </div>
+
+<!--          /Header          -->
+<!--          Headline          -->
+
+      <div class="intro__headline mb-5">
+        <h1 class="center"><span></span>Ремонт квартир в Одессе</h1>
+        <p class="center mb-2">от 500 грн/м<sup>2</sup> сроком от 10 дней и грантией до 3-х лет</p>
+        <p class="center">по европейским <span class="color-primary">стандартам ISO</span></p>
+      </div>
+
+<!--          /Headline          -->
+<!--          Profit          -->
+
+      <ul class="profit d-flex flex-column flex-md-row justify-content-around align-items-center mb-5">
+        <li class="mb-2">
+          <div class="profit-img center mb-3">
+            <img src="../../../../../assets/img/steps/2-2.png" alt="">
+          </div>
+          <p class="text-uppercase">Бесплатный выезд специалиста и смета на следующий день</p>
+        </li>
+        <li class="mb-2">
+          <div class="profit-img center mb-3">
+            <img src="../../../../../assets/img/steps/5-2.png" alt="">
+          </div>
+          <p class="text-uppercase">Поэтапная оплата по договору с гарантией 5 лет</p>
+        </li>
+        <li class="mb-2">
+          <div class="profit-img center mb-3">
+            <img src="../../../../../assets/img/steps/6-2.png" alt="">
+          </div>
+          <p class="text-uppercase">Адекватная стоимость работ, всего от 50 грн/м<sup>2</sup></p>
+        </li>
+      </ul>
+
+<!--          /Profit          -->
+<!--          Calculator          -->
+
+      <div class="calculator d-flex flex-column flex-md-row justify-content-start align-items-center">
+        <a class="calculator__btn btn mb-2">
+          <span>
+            <i class="fa fa-calculator mr-1" aria-hidden="true"></i>
+            Калькулятор стоимости ремонта
+          </span>
+        </a>
+        <div class="calculator__bait ml-4">
+          <p>Ответьте на 6 вопросов и получите гантированный подарок!</p>
+        </div>
+        <div class="calculator__gift ml-4">
+          <img src="../../../../../assets/img/gift.png" alt="">
+        </div>
+      </div>
+
+<!--          /Calculator          -->
+<!--          Social          -->
+
+      <div class="social">
+        <a href=""><i class="fa fa-vk color-hover-secondary" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-facebook color-hover-secondary ml-5" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-instagram color-hover-secondary ml-5" aria-hidden="true"></i></a>
+      </div>
+
+<!--          /Social          -->
+<!--          Modal call me back          -->
+
+      <div class="modal fade" id="intro__modal-callback" tabindex="-1" role="dialog" aria-labelledby="modalCallBack" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+
+          <div class="modal-content color-black" *ngIf="activeModal === 'callback'">
+            <div class="modal-header d-flex flex-column justify-content-between align-items-center">
+              <h4 class="modal-title center mt-2 m-3">Перезвоним в течении 10 минут</h4>
+              <button type="button" class="close color-hover-secondary" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pb-2">
+              <form class="d-flex flex-column align-items-center mb-5" name="intro__callback-form" (ngSubmit)="submitCallbackForm(userContactForm)" #userContactForm="ngForm">
+                <div class="form-group col-12">
+                  <input type="text" class="form-control" id="name-input" name="name-input" placeholder="Введите Ваше имя" [(ngModel)]="callMeBack.name">
+                </div>
+                <div class="form-group col-12">
+                  <input type="tel" class="form-control" id="tel-input" name="tel-input" pattern="^[ 0-9]+$" placeholder="Введите Ваш телефон" mask='(000) 000-00-00' [(ngModel)]="callMeBack.tel">
+                </div>
+                <button type="submit" class="btn btn-transparent mt-3">
+                  <span>Перезвоните мне</span>
+                </button>
+              </form>
+              <p class="modal-error" [class.d-block]="modalErrorMessage">*Пожалуйста, заполните имя и номер телефона.</p>
+            </div>
+          </div>
+
+<!--          /Modal call me back          -->
+<!--          /Modal thanks          -->
+
+          <div class="modal-content color-black" *ngIf="activeModal === 'thanks'">
+            <div class="modal-header d-flex flex-column justify-content-between align-items-center">
+                <i class="modal-icon fa fa-thumbs-o-up color-primary mt-2 mb-3" aria-hidden="true"></i>
+              <h4 class="modal-title center mb-3">Спасибо за проявленный интерес</h4>
+              <button type="button" class="close color-hover-secondary" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="center mb-5">Мы прямо сейчас обрабатываем Ваш запрос и ответим в ближайшее рабочее время Пн-Вс 9:00-20:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

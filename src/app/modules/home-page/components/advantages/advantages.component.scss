@@ -1,0 +1,25 @@
+.advantages {
+	background: url(../../../../../assets/img/advantages-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+
+	&__mask {
+		background: rgba(255, 255, 255, 0.8);
+		height: 100%;
+		padding: 15px;
+		border-radius: 5px;
+
+		display: flex;
+		flex-direction: column;
+		line-height: 1.5em;
+
+		.advantages__plus-icon {
+			align-self: center;
+			height: 150px;
+
+			img {
+				height: 100%;
+			}
+		}
+	}
+}

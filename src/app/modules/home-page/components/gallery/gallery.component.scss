@@ -1,0 +1,115 @@
+.gallery {
+	background: url(../../../../../assets/img/jumbotron-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+
+
+
+
+
+
+/*     Photo     */
+
+	.big-photo {
+		position: relative;
+		height: 300px;
+		overflow: hidden;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+
+	.small-photo-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+	}
+
+	.small-photo {
+		position: relative;
+		height: 90px;
+		overflow: hidden;
+		border-radius: 4px;
+		border: 2px solid transparent;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+	}
+
+	.target {
+		border-color: var(--primary);
+	}
+
+/*     /Photo     */
+/*     Description     */
+
+	&__description {
+		.row {
+			align-items: flex-start;
+		}
+
+		.col-4 {
+			display: flex;
+			align-items: center;
+		}
+
+		span {
+			font-size: .85em;
+			font-weight: 600;
+		}
+
+		i {
+			font-size: 1.5em;
+			color: var(--primary);
+		}
+
+		.col-8 {
+			padding-top: 5px;
+		}
+	}
+
+/*     /Description     */
+/*     Переключение галерей     */
+
+	&__toggle {
+		cursor: pointer;
+		color: var(--primary);
+	}
+
+	.notActive {
+		color: var(--grey-100);
+		cursor: default;
+	}
+
+	i {
+		line-height: 1.5em;
+		font-size: 1.5em;
+	}
+
+	&__number {
+		font-size: 2em;
+		font-weight: 900;
+	}
+
+	&__total {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		box-shadow: 0px 1px 2px 0px var(--grey-100);
+		transform: translateY(-15px);
+		background: var(--white);
+		color: var(--grey-100);
+		line-height: 30px;
+		text-align: center;
+		font-size: .8em;
+		font-weight: 400;
+	}
+
+	/*     Переключение галерей     */
+}

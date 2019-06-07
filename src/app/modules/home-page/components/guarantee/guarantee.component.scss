@@ -1,0 +1,31 @@
+.guarantee {
+	background: #38404e;
+
+	&__headline {
+		width: 90%;
+		font-weight: 400;
+		font-size: 1.875rem;
+		line-height: 2.375rem;
+
+		@media (min-width: 992px) {
+			font-size: 2.5rem;
+			line-height: 3.5rem;
+		}
+	}
+
+	li {
+		font-weight: 400;
+	}
+
+	&__img {
+		height: 200px;
+
+		@media (min-width: 720px) {
+			height: 100%;
+		}
+
+		img {
+			height: 100%;
+		}
+	}
+}

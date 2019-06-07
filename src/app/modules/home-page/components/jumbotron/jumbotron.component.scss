@@ -1,0 +1,194 @@
+.intro {
+	background: url(../../../../../assets/img/jumbotron-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.intro__inner {
+	min-height: 100vh;
+}
+
+/*     Header     */
+
+.header__logo {
+	img {
+		max-height: 50px;
+	}
+}
+
+.header__price {
+	display: none;
+
+	@media (min-width: 992px) {
+		display: block;
+
+		a {
+			display: block;
+			border: 2px solid var(--primary);
+			padding: 0 15px;
+			height: 34px;
+			line-height: 34px;
+			border-radius: 17px;
+
+			&:hover {
+				border: 2px solid var(--secondary);
+			}
+		}
+	}
+}
+
+.header__contact-inner * {
+	padding: 2px 0;
+	border-radius: 5px;
+	width: 15px;
+}
+
+.header__contact-viber {
+	background: rgba(255, 255, 255, .3);
+	color: var(--white);
+}
+
+.header__contact-telegram {
+	background: rgba(255, 255, 255, .3);
+	color: var(--white);
+}
+
+.header__tel-border {
+	border-left: 1px solid var(--grey);
+	border-right: 1px solid var(--grey);
+	border-bottom: 1px solid var(--grey);
+	border-radius: 5px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.header__tel-number {
+margin-left: 10px;
+margin-right: 10px;
+font-size: 1.3em;
+}
+
+.header__tel-line {
+	background: var(--grey);
+	height: 1px;
+	flex-grow: 1;
+}
+
+.translate-to-top {
+	transform: translateY(-9px);
+}
+
+.header__call-me {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/*     /Header     */
+/*     Headline     */
+
+.intro__headline > p {
+	font-size: 1.2em;
+	&:first-of-type {
+		font-size: 1.7em;
+	}
+}
+
+/*     /Headline     */
+/*     Profit     */
+
+.profit li {
+	position: relative;
+	max-width: 75%;
+	padding: 15px;
+	letter-spacing: .1em;
+	line-height: 1.3em;
+
+	.profit-img {
+		height: 50px;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	@media (min-width: 768px) {
+		max-width: 25%;
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		content: '';
+		position: absolute;
+		border: 2px solid transparent;
+		width: 80%;
+		height: 50%;
+		transition: .2s;
+	}
+
+	&:hover::before,
+	&:hover::after {
+		width: 100%;
+		height: 100%;
+		transition: .2s;
+	}
+
+	&::before {
+		top: 0;
+		left: 0;
+		border-top-color: var(--white);
+		border-left-color: var(--white);
+	}
+
+	&::after {
+		bottom: 0;
+		right: 0;
+		border-bottom-color: var(--white);
+		border-right-color: var(--white);
+	}
+}
+
+/*     /Profit     */
+/*     Calculator     */
+
+.calculator {
+	margin-bottom: 6rem;
+
+	&__bait {
+		@media (min-width: 768px) {
+			max-width: 180px;
+		}
+	}
+
+	&__gift {
+		display: none;
+
+		@media (min-width: 768px) {
+			display: block;
+			height: 70px;
+
+			img {
+				height: 100%;
+			}
+		}
+	}
+}
+
+/*     /Calculator     */
+/*     Social     */
+
+.social {
+	position: absolute;
+	bottom: 30px;
+	right: 50px;
+
+	font-size: 1.2em;
+
+	& i {
+		transition: .1s;
+	}
+
+	& i:hover {
+		transform: scale(1.5);
+	}
+}

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  // Telegram API info
+  apiUrl: 'https://api.telegram.org/bot',
+  apiKey: '752445845:AAGc0jgVUylLoWKrYEBjdYTlblbsVIpmHdk',
+  apiIdGroup: '-364998143'
 };
 
 /*
