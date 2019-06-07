@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "bootstrap": "^4.3.1",
+    "compression": "^1.7.4",
     "core-js": "^2.5.4",
     "jquery": "^3.4.1",
     "ngx-mask": "^7.9.9",
