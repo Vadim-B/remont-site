@@ -1,17 +1,17 @@
 <section class="gallery color-black">
   <div class="light__mask">
-    <div class="container pt-3 pt-md-5 pb-3 pb-md-5">
+    <div class="container pt-4 pt-md-5 pb-4 pb-md-5">
 
 <!--          Headline          -->
 
       <div class="gallery__headline headline">
-        <h2 class="center mb-3 mb-md-5"><span></span>С 2012 года мы сдали 50+ квартир с ремонтом различного типа и сложности</h2>
+        <h2 class="center mb-3 mb-md-4"><span></span>С 2012 года мы сдали 50+ квартир с ремонтом различного типа и сложности</h2>
       </div>
 
 <!--          /Headline          -->
 <!--          Photo          -->
 
-      <div class="row mb-3 mb-md-4">
+      <div class="d-flex flex-column-reverse flex-md-row mb-3 mb-md-4">
         <div class="col-12 col-md-6 mb-3" (mouseover)="targetPhotoToggleStopped = true" (mouseout)="targetPhotoToggleStopped = false">
           <div class="big-photo mb-2">
             <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-{{ targetPhoto }}.jpg" alt=""></div>
@@ -42,46 +42,46 @@
 
         <div class="gallery__description col-12 col-md-6">
           <h4 class="mb-4">Ремонтно-отделочные работы под ключ по Вильямса 57 Одесса</h4>
-          <div class="row mb-4">
-            <div class="col-4 text-uppercase">
+          <div class="row mb-3 mb-md-4">
+            <div class="col-5 col-md-4 text-uppercase">
                 <i class="fa fa-home mr-2" aria-hidden="true"></i>
                 <span>Тип жилья:</span>
               </div>
-            <div class="col-8">{{ galleryDescription[galleryNumber].type }}</div>
+            <div class="col-7 col-md-8">{{ galleryDescription[galleryNumber].type }}</div>
           </div>
-          <div class="row mb-4">
-            <div class="col-4 text-uppercase">
+          <div class="row mb-3 mb-md-4">
+            <div class="col-md-4 text-uppercase">
                 <i class="fa fa-arrows mr-2" aria-hidden="true"></i>
                 <span>Площадь:</span>
               </div>
-            <div class="col-8">{{ galleryDescription[galleryNumber].square }} м</div>
+            <div class="col-7 col-md-8">{{ galleryDescription[galleryNumber].square }} м</div>
           </div>
-          <div class="row mb-4">
-            <div class="col-4 text-uppercase">
+          <div class="row mb-3 mb-md-4">
+            <div class="col-5 col-md-4 text-uppercase">
               <i class="fa fa-clock-o mr-2" aria-hidden="true"></i>
               <span>Срок выполнения:</span>
             </div>
-            <div class="col-8">{{ galleryDescription[galleryNumber].perio }} рабочих дней</div>
+            <div class="col-7 col-md-8">{{ galleryDescription[galleryNumber].perio }} рабочих дней</div>
           </div>
-          <div class="row mb-4">
-            <div class="col-4 text-uppercase">
+          <div class="row mb-4 desktop">
+            <div class="col-5 col-md-4 text-uppercase">
               <i class="fa fa-file-text-o mr-2" aria-hidden="true"></i>
               <span>Задача:</span></div>
-            <div class="col-8">{{ galleryDescription[galleryNumber].problem }}</div>
+            <div class="col-7 col-md-8">{{ galleryDescription[galleryNumber].problem }}</div>
           </div>
-          <div class="row mb-4">
-            <div class="col-4 text-uppercase">
+          <div class="row mb-4 desktop">
+            <div class="col-5 col-md-4 text-uppercase">
               <i class="fa fa-creative-commons mr-2" aria-hidden="true"></i>
               <span>Особенность ремонта:</span>
             </div>
-            <div class="col-8">{{ galleryDescription[galleryNumber].specificity }}</div>
+            <div class="col-7 col-md-8">{{ galleryDescription[galleryNumber].specificity }}</div>
           </div>
           <div class="row mb-4">
-            <div class="col-4 text-uppercase">
+            <div class="col-5 col-md-4 text-uppercase">
               <i class="fa fa-commenting-o mr-2" aria-hidden="true"></i>
               <span>Отзыв клиента:</span>
             </div>
-            <div class="col-8">{{ galleryDescription[galleryNumber].feedback }}</div>
+            <div class="col-7 col-md-8">{{ galleryDescription[galleryNumber].feedback }}</div>
           </div>
         </div>
       </div>

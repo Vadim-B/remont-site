@@ -86,6 +86,11 @@ font-size: 1.3em;
 /*     /Header     */
 /*     Headline     */
 
+.intro__headline {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
 .intro__headline > p {
 	font-size: 1.2em;
 	&:first-of-type {
@@ -153,6 +158,14 @@ font-size: 1.3em;
 
 .calculator {
 	margin-bottom: 6rem;
+
+	&__btn span span {
+		display: none;
+
+		@media (min-width: 768px) {
+			display: inline;
+		}
+	}
 
 	&__bait {
 		@media (min-width: 768px) {
