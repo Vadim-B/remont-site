@@ -16,6 +16,14 @@
 	}
 }
 
+.desktop {
+	display: none;
+
+	@media (min-width: 992px) {
+		display: block;
+	}
+}
+
 .header__price {
 	display: none;
 
