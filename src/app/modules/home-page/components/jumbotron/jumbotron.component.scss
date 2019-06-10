@@ -106,6 +106,11 @@ font-size: 1.3em;
 	}
 }
 
+.fadeInUp {
+	animation-duration: .5s;
+	animation-delay: 1s;
+}
+
 /*     /Headline     */
 /*     Profit     */
 
@@ -115,6 +120,15 @@ font-size: 1.3em;
 	padding: 15px;
 	letter-spacing: .1em;
 	line-height: 1.3em;
+	animation-duration: 1s;
+	animation-delay: 1.2s;
+
+	&:first-of-type {
+		animation-delay: 1s;
+	}
+	&:last-of-type {
+		animation-delay: 1.4s;
+	}
 
 	.profit-img {
 		height: 50px;
@@ -190,6 +204,8 @@ font-size: 1.3em;
 
 			img {
 				height: 100%;
+				animation-duration: 2s;
+				animation-delay: 2s;
 			}
 		}
 	}

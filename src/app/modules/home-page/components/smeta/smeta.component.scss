@@ -82,6 +82,11 @@
 			transform: scale(1.02);
 			box-shadow: -5px 5px 10px 0px var(--primary);
 		}
+
+		img {
+			animation-duration: 2s;
+			animation-delay: 2s;
+		}
 	}
 
 /*     /Пример сметы     */
