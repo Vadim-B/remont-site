@@ -83,7 +83,8 @@
 <!--          Calculator          -->
 
       <div class="calculator d-flex flex-column flex-md-row justify-content-start align-items-center">
-        <a class="calculator__btn btn mb-2">
+        <a class="calculator__btn btn mb-2"
+          data-toggle="modal" data-target="#intro__modal-calculator">
           <span>
             <i class="fa fa-calculator mr-1" aria-hidden="true"></i>
             Калькулятор стоимости <span>ремонта</span>
@@ -151,8 +152,25 @@
               <p class="center mb-5">Мы прямо сейчас обрабатываем Ваш запрос и ответим в ближайшее рабочее время Пн-Вс 9:00-20:00</p>
             </div>
           </div>
+
+<!--          /Modal thanks          -->
         </div>
       </div>
+
+<!--          Modal calculator          -->
+
+      <div class="modal fade" id="intro__modal-calculator" tabindex="-1" role="dialog" aria-labelledby="intro__modal-calculator" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <app-calculator></app-calculator>
+            <button type="button" class="close color-hover-secondary" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+<!--          /Modal calculator          -->
 
     </div>
   </div>

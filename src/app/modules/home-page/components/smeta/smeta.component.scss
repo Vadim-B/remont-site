@@ -67,6 +67,7 @@
 		height: 95%;
 		border-radius: 5px;
 		background: var(--white);
+		transition: .2s;
 		box-shadow: -4px 4px 3px 0px var(--primary);
 
 		padding: 15px;
@@ -74,6 +75,12 @@
 		p {
 			font-size: .9em;
 			color: var(--grey);
+		}
+
+		&:hover {
+			transition: .2s;
+			transform: scale(1.02);
+			box-shadow: -5px 5px 10px 0px var(--primary);
 		}
 	}
 

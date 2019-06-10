@@ -4,7 +4,7 @@
 
   <!--          Headline          -->
 
-      <div class="calc__headline headline mb-3 mb-md-5">
+      <div class="calc__headline mb-3 mb-md-5">
         <h2 class="color-black center mb-3"><span></span>Рассчитайте предварительную стоимость и сроки ремонта Вашего помещения</h2>
         <p class="color-primary center">Ответьте на 6 вопросов и получите гарантированный подарок!</p>
       </div>
@@ -26,9 +26,9 @@
   <!--          /Progress bar          -->
   <!--          Question          -->
 
-      <div class="d-flex justify-content-between">
+      <div class="d-flex flex-column flex-lg-row justify-content-between">
         <div class="flex-grow d-flex flex-column justify-content-between pr-2">
-          <div class="calc__question d-flex align-items-end mt-4">
+          <div class="calc__question d-flex align-items-end mt-4 mb-4">
             <span class="calc__question-number">0{{ questionNumber + 1 }}</span>
             <span class="calc__question-total center">/08</span>
             <h4 class="ml-3">{{ question[questionNumber] }}</h4>
@@ -37,19 +37,34 @@
   <!--          /Question          -->
   <!--          Answers          -->
 
-          <form class="calc__answers d-flex flex-column flex-md-row justify-content-start align-items-center">
+          <form class="calc__answers d-flex mb-4">
             <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="calc__answers-label col-md-3 d-flex mb-2" for="inlineRadio1">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio1">
               <span class="mr-2"></span> <span class="flex-grow">Вторичка</span>
             </label>
 
             <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
-            <label class="calc__answers-label col-md-3 d-flex mb-2" for="inlineRadio2">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio2">
               <span class="mr-2"></span> <span class="flex-grow">В новостройке</span>
             </label>
 
             <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
-            <label class="calc__answers-label col-md-3 d-flex mb-2" for="inlineRadio3">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
+              <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
+            </label>
+
+            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
+              <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
+            </label>
+
+            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
+              <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
+            </label>
+
+            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
               <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
             </label>
           </form>
