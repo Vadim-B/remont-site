@@ -3,6 +3,10 @@
 	background-size: cover;
 	background-position: center center;
 
+	.forAnimated {
+		opacity: 0;
+	}
+
 	&__mask {
 		background: rgba(255, 255, 255, 0.8);
 		height: 100%;

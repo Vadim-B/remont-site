@@ -1,12 +1,7 @@
 .gallery {
-	background: url(../../../../../assets/img/jumbotron-bg.jpg);
+	background: url(../../../../../assets/img/gallery-bg.jpg);
 	background-size: cover;
 	background-position: center center;
-
-
-
-
-
 
 /*     Photo     */
 
@@ -16,6 +11,12 @@
 		overflow: hidden;
 		cursor: pointer;
 		border-radius: 5px;
+		transition: .2s;
+
+		&:hover img {
+			transform: scale(1.1) translateY(-50%);
+			transition: .3s;
+		}
 	}
 
 	.small-photo-grid {

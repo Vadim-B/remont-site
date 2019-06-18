@@ -19,8 +19,6 @@
         <li class="calc__progressbar-step step3 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 2"><span></span><span></span></li>
         <li class="calc__progressbar-step step4 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 3"><span></span><span></span></li>
         <li class="calc__progressbar-step step5 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 4"><span></span><span></span></li>
-        <li class="calc__progressbar-step step6 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 5"><span></span><span></span></li>
-        <li class="calc__progressbar-step step7 d-flex justify-content-between align-items-center" [class.complete]="questionNumber > 6"><span></span><span></span></li>
       </ul>
 
   <!--          /Progress bar          -->
@@ -29,61 +27,138 @@
       <div class="d-flex flex-column flex-lg-row justify-content-between">
         <div class="flex-grow d-flex flex-column justify-content-between pr-2">
           <div class="calc__question d-flex align-items-end mt-4 mb-4">
-            <span class="calc__question-number">0{{ questionNumber + 1 }}</span>
-            <span class="calc__question-total center">/08</span>
-            <h4 class="ml-3">{{ question[questionNumber] }}</h4>
+            <span class="calc__question-number" *ngIf="questionNumber != 5">0{{ questionNumber + 1 }}</span>
+            <span class="calc__question-total center" *ngIf="questionNumber != 5">/05</span>
+            <h4 class="ml-3" *ngIf="questionNumber != 5">{{ question[questionNumber] }}</h4>
+            <h4 class="ml-3" *ngIf="questionNumber === 5">Получите покраску потолка в подарок и расчет стоимости ремонта помещения</h4>
           </div>
 
   <!--          /Question          -->
   <!--          Answers          -->
 
-          <form class="calc__answers d-flex mb-4">
-            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio1">
+          <form class="calc__answers d-flex justify-content-center mb-4" [formGroup]="answers">
+
+<!--          Answers for question #1          -->
+
+            <input class="calc__answers-type" type="radio" name="type" id="inlineRadio1" value="Вторичка"
+              formControlName="type" checked="checked">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio1" *ngIf="questionNumber === 0">
               <span class="mr-2"></span> <span class="flex-grow">Вторичка</span>
             </label>
 
-            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
-            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio2">
+            <input class="calc__answers-type" type="radio" name="type" id="inlineRadio2" value="В новостройке"
+              formControlName="type">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio2" *ngIf="questionNumber === 0">
               <span class="mr-2"></span> <span class="flex-grow">В новостройке</span>
             </label>
 
-            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
-            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
+            <input class="calc__answers-type" type="radio" name="type" id="inlineRadio3" value="Котедж"
+              formControlName="type">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3" *ngIf="questionNumber === 0">
               <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
             </label>
 
-            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
-            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
-              <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
+<!--          Answers for question #2          -->
+
+            <input type="number" class="calc__answers-square form-control" id="square" name="square" placeholder="Введите площадь, м"
+            *ngIf="questionNumber === 1" formControlName="square">
+
+<!--          Answers for question #3          -->
+
+            <input class="calc__answers-price" type="radio" name="price" id="inlineRadio4" value="Эконом"
+            formControlName="price">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio4" *ngIf="questionNumber === 2">
+              <span class="mr-2"></span> <span class="flex-grow">Эконом</span>
             </label>
 
-            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
-            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
-              <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
+            <input class="calc__answers-price" type="radio" name="price" id="inlineRadio5" value="Стандарт"
+              formControlName="price">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio5" *ngIf="questionNumber === 2">
+              <span class="mr-2"></span> <span class="flex-grow">Стандарт</span>
             </label>
 
-            <input class="calc__answers-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
-            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio3">
-              <span class="mr-2"></span> <span class="flex-grow">Котедж</span>
+            <input class="calc__answers-price" type="radio" name="price" id="inlineRadio6" value="Премиум"
+              formControlName="price">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio6" *ngIf="questionNumber === 2">
+              <span class="mr-2"></span> <span class="flex-grow">Премиум</span>
             </label>
+
+<!--          Answers for question #4          -->
+
+            <input class="calc__answers-starDate" type="radio" name="starDate" id="inlineRadio7" value="Срочно"
+            formControlName="starDate">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio7" *ngIf="questionNumber === 3">
+              <span class="mr-2"></span> <span class="flex-grow">Как можно быстрее</span>
+            </label>
+
+            <input class="calc__answers-starDate" type="radio" name="starDate" id="inlineRadio8" value="В течении месяца"
+              formControlName="starDate">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio8" *ngIf="questionNumber === 3">
+              <span class="mr-2"></span> <span class="flex-grow">В течении месяца</span>
+            </label>
+
+            <input class="calc__answers-starDate" type="radio" name="starDate" id="inlineRadio9" value="Пока не определились"
+              formControlName="starDate">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio9" *ngIf="questionNumber === 3">
+              <span class="mr-2"></span> <span class="flex-grow">Пока не определились</span>
+            </label>
+
+<!--          Answers for question #5          -->
+
+            <input class="calc__answers-addServices" type="radio" name="addServices" id="inlineRadio10" value="Дизайн-проект"
+            formControlName="addServices">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio10" *ngIf="questionNumber === 4">
+              <span class="mr-2"></span> <span class="flex-grow">Дизайн-проект</span>
+            </label>
+
+            <input class="calc__answers-addServices" type="radio" name="addServices" id="inlineRadio11" value="Демонтажные работы"
+              formControlName="addServices">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio11" *ngIf="questionNumber === 4">
+              <span class="mr-2"></span> <span class="flex-grow">Демонтажные работы</span>
+            </label>
+
+            <input class="calc__answers-addServices" type="radio" name="addServices" id="inlineRadio12" value="Нужны две смены"
+              formControlName="addServices">
+            <label class="calc__answers-label col-12 col-lg-3 d-flex mb-2" for="inlineRadio12" *ngIf="questionNumber === 4">
+              <span class="mr-2"></span> <span class="flex-grow">Срочное выполнение (работаем в две смены)</span>
+            </label>
+
           </form>
 
-  <!--          /Answers          -->
-  <!--          Submit answers          -->
+<!--          /Answers          -->
+<!--          Submit answers          -->
 
-          <div class="calc__submit d-flex justify-content-center mb-4 mb-md-5" [class.none]="questionNumber === 7">
-            <div class="calc__submit-btn previous color-primary color-hover-secondary mr-2"(click)="previousQuestion()">Назад</div>
+          <div class="calc__submit d-flex justify-content-center mb-4 mb-md-5" *ngIf="questionNumber != 5">
+            <div class="calc__submit-btn previous color-primary color-hover-secondary mr-2"
+              (click)="previousQuestion()" [class.none-active]="questionNumber === 0">Назад</div>
             <div class="calc__submit-btn next color-primary color-hover-secondary" (click)="nextQuestion()">Далее</div>
           </div>
+
+<!--          /Submit answers          -->
+<!--          Отправка формы          -->
+
+          <form class="d-flex flex-column flex-md-row justify-content-center align-items-center" name="calc__form-submit"
+            (ngSubmit)="submitCallbackForm(userContactForm)" #userContactForm="ngForm" *ngIf="questionNumber === 5">
+            <input type="tel" class="form-control calc__submit-form mr-md-3 mb-3 mb-md-0" id="tel-input" name="tel-input" pattern="^[ 0-9]+$" placeholder="Введите Ваш телефон" mask='(000) 000-00-00' [(ngModel)]="userTel">
+            <button type="submit" class="btn">
+              <span>Рассчитать стоимость</span>
+            </button>
+          </form>
+          <p class="calc__submit-message mt-2 mt-md-3"
+          *ngIf="messageColor"
+          [class.alert-success]="messageColor == 'success'" [class.alert-danger]="messageColor == 'danger'">
+          {{ message }}
+        </p>
+
+<!--          /Отправка формы          -->
+
         </div>
 
-  <!--          /Submit answers          -->
-  <!--          Gift          -->
+<!--          Gift          -->
 
-        <div class="calc__gift" [class.none]="questionNumber === 7">
+        <div class="calc__gift" *ngIf="questionNumber != 5">
           <span class="small mb-2">До выбора подарка осталось:</span>
-          <span class="color-primary mb-4">{{ 6 - questionNumber }} вопросов</span>
+          <span class="color-primary mb-4">{{ 5 - questionNumber }} вопросов</span>
           <div class="calc__gift-img">
             <img src="../../../../../assets/img/gift.png" alt="">
           </div>

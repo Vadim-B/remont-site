@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import {NgxMaskModule} from 'ngx-mask';
@@ -30,6 +30,7 @@ import { GuaranteeComponent } from './components/guarantee/guarantee.component';
     CommonModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
 
     NgxMaskModule.forRoot()
   ],

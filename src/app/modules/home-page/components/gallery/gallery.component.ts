@@ -16,6 +16,7 @@ export class GalleryComponent implements OnInit {
   // Описание объекта из галереи
   public galleryDescription = [
     {
+      title: 'Ремонтно-отделочные работы под ключ по Вильямса 57 Одесса',
       type: 'Новостройка',
       square: 125,
       perio: 30,
@@ -24,6 +25,7 @@ export class GalleryComponent implements OnInit {
       feedback: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem libero sit cumque temporibus error hic illum reiciendis, similique quos laudantium? Ipsam ad minus vero quo, perspiciatis a sapiente veniam ullam.'
     },
     {
+      title: 'Ремонт под ключ по Королева 21 Одесса',
       type: 'Вторичка',
       square: 150,
       perio: 32,
@@ -32,6 +34,7 @@ export class GalleryComponent implements OnInit {
       feedback: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem libero sit cumque temporibus error hic illum reiciendis, similique quos laudantium? Ipsam ad minus vero quo, perspiciatis a sapiente veniam ullam.'
     },
     {
+      title: 'Ремонт под ключ',
       type: 'Новостройка',
       square: 140,
       perio: 27,
@@ -40,6 +43,7 @@ export class GalleryComponent implements OnInit {
       feedback: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem libero sit cumque temporibus error hic illum reiciendis, similique quos laudantium? Ipsam ad minus vero quo, perspiciatis a sapiente veniam ullam.'
     },
     {
+      title: 'Ремонт котеджа',
       type: 'Вторичка',
       square: 130,
       perio: 25,
@@ -48,6 +52,7 @@ export class GalleryComponent implements OnInit {
       feedback: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem libero sit cumque temporibus error hic illum reiciendis, similique quos laudantium? Ipsam ad minus vero quo, perspiciatis a sapiente veniam ullam.'
     },
     {
+      title: 'Ремонт под ключ',
       type: 'Новостройка',
       square: 170,
       perio: 35,

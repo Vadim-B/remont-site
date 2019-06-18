@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { TelegramApiService } from 'src/app/services/telegram-api.service';
 
 @Component({
   selector: 'app-calculator',
@@ -8,31 +10,35 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   public question = [
     'Выберите тип Вашего объекта',
-    'Вопрос №2',
-    'Вопрос №3',
-    'Вопрос №4',
-    'Вопрос №5',
-    'Вопрос №6',
-    'Вопрос №7',
-    'Вопрос №8'
+    'Какая площадь у Вашего помещения',
+    'В какой ценовой категории Вы планируете сделать ремонт',
+    'Когда нужно приступить к ремонту',
+    'Понадобятся ли какие-то доп. услуги?',
+    'Получите покраску потолка в подарок и расчет стоимости ремонта помещения'
   ];
 
-  public answers = [
-    ['Вторичка', 'В новостройке', 'Котедж'],
-    ['Вариант 1', 'Вариант 2', 'Вариант 3', 'Вариант 4'],
-    ['Вариант 5', 'Вариант 6', 'Вариант 7', 'Вариант 8'],
-    ['Вариант 9', 'Вариант 1', 'Вариант 2', 'Вариант 3'],
-    ['Вариант 4', 'Вариант 5', 'Вариант 6', 'Вариант 7'],
-    ['Вариант 8', 'Вариант 9', 'Вариант 1', 'Вариант 2'],
-    ['Вариант 3', 'Вариант 4', 'Вариант 5', 'Вариант 6'],
-    ['Вариант 7', 'Вариант 8', 'Вариант 9', 'Вариант 1']
-  ];
+  public answers: FormGroup;
 
   public questionNumber = 0;
 
-  constructor() { }
+  public userTel: string;
+
+  public message: string;
+  public messageColor: string;
+
+  constructor(
+    private telegramApi: TelegramApiService
+  ) { }
 
   ngOnInit() {
+    // Init form
+    this.answers = new FormGroup({
+      'type': new FormControl(''),
+      'square': new FormControl(''),
+      'price': new FormControl(''),
+      'starDate': new FormControl(''),
+      'addServices': new FormControl(''),
+    });
   }
 
   public previousQuestion() {
@@ -42,9 +48,43 @@ export class CalculatorComponent implements OnInit {
   }
 
   public nextQuestion() {
-    if (this.questionNumber < 7) {
+    if (this.questionNumber < 5) {
       this.questionNumber += 1;
+      console.log(this.answers.value);
     }
+  }
+
+  public submitCallbackForm(form: NgForm) {
+    if (this.userTel && this.userTel.length === 10) {
+      this.sendUserContact();
+
+      // чистим форму
+      form.resetForm();
+
+      this.message = 'Спасибо! Наш менеджер свяжется с Вами в ближайшее время';
+      this.messageColor = 'success';
+
+    } else {
+      this.message = '*Пожалуйста, укажите правильно Ваш номер телефона';
+      this.messageColor = 'danger';
+    }
+  }
+
+  /**
+   * метод для отправки сообщения в телеграм с именем и телефоном пользователя
+   */
+  public sendUserContact() {
+    const message = encodeURI(`
+    <b>Хочу узнать стоимость!</b>
+    Тип объекта: ${this.answers.value.type},
+    Площадь: ${this.answers.value.square},
+    Ценовая кат-ия: ${this.answers.value.price},
+    Хочу начать: ${this.answers.value.starDate},
+    Доп. услуги: ${this.answers.value.addServices},
+    Мой тел.: ${this.userTel}
+    `);
+
+    this.telegramApi.sendMessage(message).subscribe((data: any) => {});
   }
 
 }

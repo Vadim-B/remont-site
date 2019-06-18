@@ -3,6 +3,15 @@
 	min-height: 100vh;
 }
 
+*:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+section {
+	position: relative;
+}
+
 .dark__mask {
 	background: rgba(35, 35, 35, .7);
 }
@@ -174,8 +183,28 @@ top-left-border-dec > span {
 
 }
 
+.animated {
+	animation-duration: 1s;
+	animation-delay: .4s;
+
+	&:first-of-type {
+		animation-delay: .6s;
+	}
+
+	&:last-of-type {
+		animation-delay: .2s;
+	}
+}
 
 
+.form-control {
+	border: 1px solid var(--primary);
+	&:focus {
+		border-color: var(--secondary);
+    outline: 0;
+    box-shadow: 0 0 0 1px var(--secondary);
+	}
+}
 
 
 

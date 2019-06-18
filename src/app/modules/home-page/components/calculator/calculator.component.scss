@@ -101,6 +101,7 @@
 			text-align: center;
 			font-size: .8em;
 			font-weight: 400;
+			flex-shrink: 0;
 		}
 	}
 
@@ -110,7 +111,10 @@
 	&__answers {
 		flex-wrap: wrap;
 
-		input {
+		&-type,
+		&-price,
+		&-starDate,
+		&-addServices {
 			display: none;
 		}
 
@@ -126,6 +130,7 @@
 				border-radius: 50%;
 				border: 1px solid var(--grey-100);
 				transition: .1s;
+				flex-shrink: 0;
 
 				&::after {
 					display: block;
@@ -147,6 +152,15 @@
 			width: 6px;
 			height: 6px;
 			box-shadow: 0px 0px 10px 0px var(--secondary);
+		}
+
+		&-square {
+			@media (min-width: 768px) {
+				width: 50%;
+			}
+			@media (min-width: 992px) {
+				width: 40%;
+			}
 		}
 	}
 
@@ -170,11 +184,36 @@
 		}
 	}
 
+	.none-active {
+		color: var(--grey-100);
+		border-color: var(--grey-100);
+		cursor: default;
+	}
+
 /*     /Submit answers     */
+/*     submit-form     */
+
+	&__submit-form {
+		width: 220px;
+		height: 67px;
+		line-height: 67px;
+		border-radius: 34px;
+		padding: 0 15px;
+		text-align: center;
+	}
+
+	&__submit-message {
+		background-color: transparent;
+		transition: .1s;
+		text-align: center;
+	}
+
+/*     /submit-form     */
 /*     Gift     */
 
 	&__gift {
 		display: none;
+		flex-shrink: 0;
 
 		@media (min-width: 992px) {
 			display: flex;
