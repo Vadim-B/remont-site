@@ -47,13 +47,6 @@ export class AdvantagesComponent implements OnInit {
         elementState.target.classList.add(
           elementState.target.getAttribute('data-animated-class')
         );
-      // если анимация сработала и элемент ушел из зоны видимости
-      } else if (elementState.target.classList.contains(
-        elementState.target.getAttribute('data-animated-class')
-      )) {
-        elementState.target.classList.remove(
-          elementState.target.getAttribute('data-animated-class')
-        );
       }
     });
   }

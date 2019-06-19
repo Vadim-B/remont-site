@@ -14,7 +14,8 @@
       <div class="d-flex flex-column-reverse flex-md-row mb-3 mb-md-4">
         <div class="col-12 col-md-6 mb-3" (mouseover)="targetPhotoToggleStopped = true" (mouseout)="targetPhotoToggleStopped = false">
           <div class="big-photo mb-2">
-            <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-{{ targetPhoto }}.jpg" alt=""></div>
+            <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-{{ targetPhoto }}.jpg" alt="">
+          </div>
           <div class="small-photo-grid">
             <div class="small-photo" [class.target]="targetPhoto === 1" (mouseover)="targetPhoto = 1">
               <img src="../../../../../assets/img/gallery/{{ galleryNumber }}-1.jpg" alt="">

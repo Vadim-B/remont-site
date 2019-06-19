@@ -27,10 +27,10 @@
           </div>
           <span class="mb-3">и согласует время для приезда мастера</span>
           <form class="d-flex flex-column align-items-center mb-5" name="smeta__callback-form" (ngSubmit)="submitCallbackForm(userContactForm)" #userContactForm="ngForm">
-            <div class="form-group col-12">
+            <div class="form-group">
               <input type="text" class="form-control" id="name-input" name="name-input" placeholder="Введите Ваше имя" [(ngModel)]="callMeBack.name">
             </div>
-            <div class="form-group col-12">
+            <div class="form-group">
               <input type="tel" class="form-control" id="tel-input" name="tel-input" pattern="^[ 0-9]+$" placeholder="Введите Ваш телефон" mask='(000) 000-00-00' [(ngModel)]="callMeBack.tel">
             </div>
             <button type="submit" class="btn btn-transparent mt-3">
